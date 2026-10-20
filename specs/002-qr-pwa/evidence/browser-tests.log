@@ -1,0 +1,33 @@
+
+> gabriel-contact-page@1.0.0 test
+> playwright test --workers=2
+
+[WebServer] (node:7547) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 2 workers
+
+(node:7567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7566) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/contact.spec.ts:14:1 › approved destinations, order, native navigation and local icons (970ms)
+  ✓   1 tests/contact.spec.ts:31:1 › Portuguese selection translates interface and every fresh load resets to English (1.4s)
+  ✓   3 tests/contact.spec.ts:61:1 › missing and corrupt portrait show GL; supplied local portrait displays and translates alt (880ms)
+  ✓   4 tests/contact.spec.ts:82:3 › responsive targets and overflow at 320px (1.0s)
+  ✓   5 tests/contact.spec.ts:82:3 › responsive targets and overflow at 375px (781ms)
+  ✓   6 tests/contact.spec.ts:82:3 › responsive targets and overflow at 768px (848ms)
+  ✓   7 tests/contact.spec.ts:82:3 › responsive targets and overflow at 1440px (925ms)
+  ✓   9 tests/qr.spec.ts:19:1 › QR pixels contain exact contact URL; photo, navigation and memory-only language work (1.0s)
+  ✓   8 tests/contact.spec.ts:100:1 › keyboard focus, reduced motion, and accessibility in both languages (2.3s)
+  ✓  11 tests/qr.spec.ts:74:1 › manifest, local icon dimensions and installation launch configuration (768ms)
+  ✓  10 tests/qr.spec.ts:43:1 › first complete online visit supports offline reload and new-tab launch with real photo and icons (1.8s)
+  ✓  12 tests/qr.spec.ts:103:1 › failed offline preparation is honest and retry recovers without deleting unrelated caches (1.0s)
+  ✓  13 tests/qr.spec.ts:120:3 › QR mobile accessibility and layout at 320px (2.0s)
+  ✓  14 tests/qr.spec.ts:120:3 › QR mobile accessibility and layout at 375px (1.9s)
+  ✓  15 tests/qr.spec.ts:120:3 › QR mobile accessibility and layout at 768px (2.0s)
+  ✓  16 tests/qr.spec.ts:120:3 › QR mobile accessibility and layout at 1440px (2.2s)
+  ✓  18 tests/qr.spec.ts:208:1 › fixed-name photo and icon edits create new offline worker versions (193ms)
+  ✓  17 tests/qr.spec.ts:147:1 › worker updates wait for old QR clients and clean only prior QR cache versions (1.9s)
+
+  18 passed (13.8s)

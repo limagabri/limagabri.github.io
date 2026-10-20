@@ -31,7 +31,8 @@ Automated checks do not replace actual physical-device, NFC or QR tests.
 
 ## Update the photograph
 
-The actual selected BRACIS portrait is not present. The page shows GL until it is supplied.
+The selected BRACIS portrait is stored at `public/images/profile.jpg` and reused by both pages.
+GL remains the fallback for image loading errors.
 Save the owner's photo as **`public/images/profile.jpg`** (exact spelling). Prefer a natural square
 head-and-shoulders crop, 400–600px and under 150KB. The circular crop preserves proportions.
 Replace this same file and commit; no component edits are needed. A missing/invalid image falls back
@@ -87,3 +88,55 @@ records are retained under `.specify/` and `specs/001-contact-hub/`.
 See evidence for exact outcomes and outstanding external limitations.
 
 Service logos and licenses: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Offline QR companion and installation
+
+Open **https://limagabri.github.io/qr/** on your phone. The large black-on-white code points exactly
+to https://limagabri.github.io/ and is generated locally at build time, without a QR service.
+The card reuses the name, role and actual portrait from the contact page. EN is the initial language
+on each fresh load; PT selection stays in memory only. The original root contact UI is unchanged.
+
+Wait for **Ready offline** before disconnecting. This confirms the scoped worker has successfully
+prepared its complete local version, including QR, actual photo, styles and home-screen icons.
+If saving fails, connect and use the retry button. Once ready, reload or reopen `/qr/` offline.
+The **Open contacts** link leads to `/`, which still requires internet; external profiles also need internet.
+Browser storage can be cleared/evicted, so reconnect and wait for readiness again if necessary.
+
+To install:
+
+- Android: open `/qr/` in a supporting browser, then its menu → **Install app** or **Add to Home Screen**.
+- iPhone: open `/qr/` in Safari, then **Share → Add to Home Screen**. The browser controls the available options.
+
+The manifest configures id/start_url/scope `/qr/`, display `standalone`, local normal 192/512 icons,
+a maskable 512 icon and Apple touch 180 icon. Installation UI/availability varies by browser/OS.
+The installed icon is configured to launch `/qr/`, not the root contact page.
+
+### Maintain the QR and offline cache
+
+`src/data/qr.ts` centralizes the exact QR target and bilingual companion copy.
+`scripts/generate-qr-assets.mjs` creates the QR SVG and original vector GL app icons during prebuild.
+Do not manually edit generated files under `public/qr/code.svg` or `public/qr/icons/`; edit the generator.
+`public/qr/manifest.webmanifest` defines installation identity.
+`qr/index.html` is the real GitHub Pages directory entry, not a client-side routing fallback.
+
+`scripts/build-qr-worker.mjs` runs after Vite, follows the QR build dependency graph and emits
+`dist/qr/sw.js`. Its version hashes all resource contents, including fixed-name photo/icons and
+worker generation logic. The worker is registered only by `/qr/`, with scope `/qr/`; root pages are
+not controlled. A new complete version waits until old QR clients close before activation.
+After an update, close all open QR windows/tabs and reopen online once; then wait for readiness.
+Only this feature's old `gabriel-qr-` caches are removed. No language preference is cached or persisted.
+
+### Automated and phone checks
+
+`npm run build` and `npm test` cover both pages. The QR tests independently decode rendered pixels
+with jsQR, check exact payload, actual photo and icons after offline reload/new-tab launch, truthful
+cache failure/retry, safe update lifecycle and content versioning, manifest/local icon dimensions,
+Chromium installability criteria, root isolation, translations, accessibility and mobile layouts.
+Evidence and Spec Kit artifacts: `specs/002-qr-pwa/`.
+
+Automated configuration checks do **not** prove installation on a real phone. On your phone:
+
+1. Install from `/qr/`, launch from its home-screen icon, and confirm `/qr/` opens without browser chrome.
+2. Wait for readiness online, close/reopen offline and inspect the photo and QR.
+3. Scan the displayed code from another phone at typical brightness/distance; confirm it opens the root contacts URL.
+4. Check Android and iPhone separately if both platforms matter. Hardware installation and camera scans are not claimed as performed here.
