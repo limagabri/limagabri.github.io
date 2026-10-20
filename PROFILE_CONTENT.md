@@ -1,7 +1,8 @@
-# Confirmed profile links
+# Confirmed profile content
 
 Owner: Gabriel de Souza Lima.
 
+## Links
 Use these destinations in this order in the unified contact list:
 
 | Service | URL |
@@ -13,8 +14,18 @@ Use these destinations in this order in the unified contact list:
 | ORCID | https://orcid.org/0009-0006-0744-313X |
 | Lattes | http://lattes.cnpq.br/6277280010932061 |
 
-LinkedIn and Instagram tracking parameters were removed. The Lattes destination is the direct URL supplied by the owner and supersedes the earlier buscatextual URL. Do not retain temporary CAPTCHA parameters.
-These destinations were supplied by the owner (GitHub is the authenticated account). Live destination behavior has not yet been verified.
+Tracking parameters were removed. Lattes uses the direct owner-provided URL. Do not retain temporary CAPTCHA parameters. Live destination behavior has not yet been verified.
 
-This document resolves the profile URL inputs listed as pending in PRODUCT_BRIEF.md. The photo and final bilingual introduction remain pending.
+## Approved introduction
+EN: AI Engineer · Researcher
+PT-BR: Engenheiro de IA · Pesquisador
+
+## Copy and icons
+The owner's earlier word "emocional" was a typo for "emoji". The explicit requirement is no emojis and no em dashes in product copy. Keep copy concise and factual. Use proper graphical service icons rather than emoji substitutes. Omit decorative slogans from the demo.
+
+## Photo selection
+The owner provided two BRACIS photographs and authorized selecting a good face crop. Select the first, close-up selfie in the blue polo, because the face has more usable detail. Preserve natural appearance and use a centered head-and-shoulders crop suited to a circular avatar.
+The image asset has not yet been committed to this repository; do not claim otherwise. Keep the documented replaceable photo path.
+
+This document resolves the profile URL and introduction inputs listed as pending in PRODUCT_BRIEF.md. It also records the photo selection, pending actual asset integration.
 Continue to follow PRODUCT_BRIEF.md, including official GitHub Spec Kit, React/TypeScript/Vite, mobile layout, inclusion of Lattes, and English on every fresh page load.
