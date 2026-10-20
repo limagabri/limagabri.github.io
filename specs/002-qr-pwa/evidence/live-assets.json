@@ -1,0 +1,86 @@
+[
+  {
+    "path": "/assets/qr-MjE0N4Pe.js",
+    "bytes": 4472,
+    "sha256": "5b658a2f0ff9765cd12f726e8abbd43cdcfe4474cb542dce225aa70692722f57",
+    "matches_local_build": true
+  },
+  {
+    "path": "/assets/qr-cRmGTp9N.css",
+    "bytes": 1902,
+    "sha256": "006387baa653cad0f1c9d49775ca179fb109412d35c8bdd2a20220a656595288",
+    "matches_local_build": true
+  },
+  {
+    "path": "/assets/styles-BJDmYzdi.js",
+    "bytes": 221081,
+    "sha256": "1bfe6ca551e9ed9872a0bb7eef9e52c535ceb222abba9df0eeb5901f383739c0",
+    "matches_local_build": true
+  },
+  {
+    "path": "/assets/styles-DftM8iRt.css",
+    "bytes": 4037,
+    "sha256": "956ffbc9c0b123bb483bae71491c188fc3637893f9bcedee6d422a38739f3ce6",
+    "matches_local_build": true
+  },
+  {
+    "path": "/images/profile.jpg",
+    "bytes": 158400,
+    "sha256": "db3a6ee6e878d467dbaa87979eebc01ed69443169116ca681fc1fcff97605143",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/",
+    "bytes": 1070,
+    "sha256": "95e03e87218a0ff15344a4dabf9297b45b8f7e3670c678fe939a82af33ffe832",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/code.svg",
+    "bytes": 1622,
+    "sha256": "8bef43866a20b82d0bcaa7f5cc033c8405710055b925378cb26d0b9647a56ca9",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/icons/apple-touch-icon.png",
+    "bytes": 5719,
+    "sha256": "41366982389e6ce6646cb2e4e810ff98e5a36bfbea746c950fd4eaab5f4ff5b0",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/icons/icon-192.png",
+    "bytes": 6196,
+    "sha256": "361b1bf29b7a68a86b7d79c4a0b12d03212865f629651f2a28d6aea4df676240",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/icons/icon-512.png",
+    "bytes": 22174,
+    "sha256": "973d6be8c8023af47e429031c47ec30bc530dbc1927a7f66ba60a00f6e9495af",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/icons/maskable-512.png",
+    "bytes": 22174,
+    "sha256": "973d6be8c8023af47e429031c47ec30bc530dbc1927a7f66ba60a00f6e9495af",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/index.html",
+    "bytes": 1070,
+    "sha256": "95e03e87218a0ff15344a4dabf9297b45b8f7e3670c678fe939a82af33ffe832",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/manifest.webmanifest",
+    "bytes": 621,
+    "sha256": "c524b2770d3d0e597c8c8dd538aaf39a0c182485b583e910072c5742a9fc1248",
+    "matches_local_build": true
+  },
+  {
+    "path": "/qr/sw.js",
+    "bytes": 1841,
+    "sha256": "7cb190faf1f600fbca07aba01146762fbfacb8f67bfb44c9492768e1562c006d",
+    "matches_local_build": true
+  }
+]

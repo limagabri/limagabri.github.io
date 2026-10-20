@@ -31,7 +31,7 @@ Independent test: Validate local manifest/icons/start URL and document physical-
 ## Phase 6: Review and delivery
 - [x] T013 Run production build, all root regressions and QR scenarios, screenshot/a11y/keyboard/zoom/reduced-motion checks; retain evidence in specs/002-qr-pwa/evidence/.
 - [x] T014 Review current code against artifacts through installed converge skill; append and resolve findings in specs/002-qr-pwa/tasks.md until buildable scope converges.
-- [ ] T015 Publish by normal PR/merge via .github/workflows/pages.yml and verify actual deploy plus live QR/manifest/offline/root; record specs/002-qr-pwa/evidence/deployment.md.
+- [x] T015 Publish by normal PR/merge via .github/workflows/pages.yml and verify actual deploy plus live QR/manifest/offline/root; record specs/002-qr-pwa/evidence/deployment.md.
 
 ## Dependencies and parallel opportunities
 Setup -> foundation -> US1 -> US2 -> US3 -> review -> publication.
@@ -48,4 +48,4 @@ No root UI edits or added root controls. Tests may run in separate isolated brow
 No extension hooks configured. Physical phone installation/camera tests are documented follow-up, not automated gates.
 
 ## Phase 7: Convergence
-- [ ] T016 Complete publication and verify actual /qr/ HTTPS manifest, decoded QR, offline reload/new tab and root regressions; retain specs/002-qr-pwa/evidence/deployment.md per FR-012 and SC-006 (partial). Local code and 18 tests satisfy the remaining buildable scope.
+- [x] T016 Complete publication and verify actual /qr/ HTTPS manifest, decoded QR, offline reload/new tab and root regressions; retain specs/002-qr-pwa/evidence/deployment.md per FR-012 and SC-006 (partial). Local code and 18 tests satisfy the remaining buildable scope.
