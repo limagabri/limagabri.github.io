@@ -21,4 +21,6 @@ Limitations: Chromium desktop browser and emulated viewport/CSS zoom checks only
 phone, NFC tag read or QR scan performed. External destinations may require login/CAPTCHA;
 exact approved hrefs and native navigation are tested, not access to every remote profile.
 No actual owner photograph was available; injected fixture is a geometric SVG, never a portrait.
-No successful production deployment is claimed.
+Production deployment subsequently succeeded and all eight browser tests passed on the actual
+HTTPS URL; deployed JS/CSS matched the tested build. See deployment.md, live-browser-tests.log
+and live-assets.json. The missing portrait limitation remains.

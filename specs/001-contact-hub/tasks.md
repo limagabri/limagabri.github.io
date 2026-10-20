@@ -35,7 +35,7 @@ Independent test: Serve a valid test image at documented path; verify it replace
 ## Phase 6: Polish and verification
 - [x] T014 Run production build and complete browser checks, axe, focus/contrast/reduced-motion/zoom/overflow review; retain evidence in specs/001-contact-hub/evidence/.
 - [x] T015 Review all artifacts, execute installed converge skill and append any discovered work to specs/001-contact-hub/tasks.md; resolve feasible findings.
-- [ ] T016 Publish through normal GitHub workflow, inspect deploy result and verify https://limagabri.github.io against built output; record evidence in specs/001-contact-hub/evidence/deployment.md.
+- [x] T016 Publish through normal GitHub workflow, inspect deploy result and verify https://limagabri.github.io against built output; record evidence in specs/001-contact-hub/evidence/deployment.md.
 
 ## Dependencies & Execution Order
 T001 -> T002 -> foundation (T003/T004) -> US1 -> US2 -> US3 -> validation -> convergence -> publication.
@@ -57,5 +57,8 @@ External permissions and the absent owner photo must be reported honestly, never
 No extension hooks are configured. No clarification is needed beyond already documented missing external assets.
 
 ## Phase 7: Convergence
-- [ ] T017 Enable GitHub Actions as the Pages source with an authorized owner credential, publish via .github/workflows/pages.yml, and verify live output in specs/001-contact-hub/evidence/deployment.md per FR-009, SC-006 and Constitution V (partial, HIGH; HTTP 403 external blocker).
+- [x] T017 Enable GitHub Actions as the Pages source with an authorized owner credential, publish via .github/workflows/pages.yml, and verify live output in specs/001-contact-hub/evidence/deployment.md per FR-009, SC-006 and Constitution V (partial, HIGH; HTTP 403 external blocker).
 - [ ] T018 Integrate the actual selected owner portrait at public/images/profile.jpg and verify the deployed crop per US3/AC2 and Constitution V (missing, HIGH; owner asset unavailable). Keep the verified GL fallback meanwhile.
+
+## Phase 8: Convergence
+- [ ] T019 Complete the remaining owner-asset work tracked by T018: add the actual selected BRACIS portrait to public/images/profile.jpg and verify its production crop per US3/AC2 and Constitution V (missing, HIGH; external asset unavailable). Deployment and live verification are now satisfied.

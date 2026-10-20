@@ -27,3 +27,8 @@ CLI command was used to generate prose.
 
 No extensions.yml exists; hook checks therefore skipped as instructed.
 No spec or plan modifications were made by the convergence pass.
+
+Follow-up: after the owner enabled Pages Actions, implement completed publication tasks T016/T017.
+The successful deploy and production-browser evidence are in deployment.md. Converge was rerun
+against current artifacts with the prerequisite script; deployment findings were resolved and only
+the external portrait remained. Phase 8/T019 carries that gap forward without a false convergence claim.

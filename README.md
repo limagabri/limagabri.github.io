@@ -58,9 +58,10 @@ It uses restricted permissions and GitHub's Pages OIDC deployment flow. Follow r
 and environment rules; do not bypass protections. A successful build is not proof of a deployed site:
 inspect the deployment job and open the permanent URL to verify the served page.
 
-The initial environment can read Pages settings but cannot read Actions-permission or detailed
-branch-protection settings (403); branch metadata reports main unprotected and no rulesets.
-Any publication permission failure is recorded in `specs/001-contact-hub/evidence/`.
+The initial integration could not change the Pages source (403). The owner enabled GitHub Actions
+and the production build/deploy succeeded. The live URL passed all eight browser scenarios, and
+its JS/CSS matched the tested build byte-for-byte. Evidence, workflow links and remaining photo
+limitations are recorded in `specs/001-contact-hub/evidence/deployment.md`.
 
 ## Maintain from a phone
 

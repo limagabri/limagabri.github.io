@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/assets/index-6R9SHZOK.js",
+    "sha256": "79f58ac07f0682ebe5e9d9f9c3a53c3a095785143361cc90cbae7018e3cb693c",
+    "bytes": 223306,
+    "matches_local_build": true
+  },
+  {
+    "path": "/assets/index-C_RmPenl.css",
+    "sha256": "f1876a4fbea93fa1be4d042e1d2675fd97f1bfa10c6557e4735b7588e91ffe8f",
+    "bytes": 3990,
+    "matches_local_build": true
+  }
+]
