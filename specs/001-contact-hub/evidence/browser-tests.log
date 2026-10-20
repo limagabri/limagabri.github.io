@@ -1,0 +1,23 @@
+
+> gabriel-contact-page@1.0.0 test
+> playwright test --workers=2
+
+[WebServer] (node:2853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+(node:2873) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/contact.spec.ts:14:1 › approved destinations, order, native navigation and local icons (827ms)
+  ✓  1 tests/contact.spec.ts:31:1 › Portuguese selection translates interface and every fresh load resets to English (1.2s)
+  ✓  3 tests/contact.spec.ts:61:1 › missing and corrupt portrait show GL; supplied local portrait displays and translates alt (699ms)
+  ✓  4 tests/contact.spec.ts:82:3 › responsive targets and overflow at 320px (884ms)
+  ✓  5 tests/contact.spec.ts:82:3 › responsive targets and overflow at 375px (712ms)
+  ✓  6 tests/contact.spec.ts:82:3 › responsive targets and overflow at 768px (844ms)
+  ✓  7 tests/contact.spec.ts:82:3 › responsive targets and overflow at 1440px (849ms)
+  ✓  8 tests/contact.spec.ts:100:1 › keyboard focus, reduced motion, and accessibility in both languages (1.3s)
+
+  8 passed (5.3s)
