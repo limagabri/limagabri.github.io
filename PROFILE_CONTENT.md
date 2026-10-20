@@ -11,9 +11,9 @@ Use these destinations in this order in the unified contact list:
 | X / Twitter | https://x.com/gaabriiel_lima |
 | GitHub | https://github.com/limagabri |
 | ORCID | https://orcid.org/0009-0006-0744-313X |
-| Lattes | https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2102146P7 |
+| Lattes | http://lattes.cnpq.br/6277280010932061 |
 
-LinkedIn and Instagram tracking parameters were removed. The temporary CAPTCHA parameter supplied with the Lattes URL was omitted; preserve the supplied curriculum identifier K2102146P7. Do not invent a numeric Lattes identifier.
+LinkedIn and Instagram tracking parameters were removed. The Lattes destination is the direct URL supplied by the owner and supersedes the earlier buscatextual URL. Do not retain temporary CAPTCHA parameters.
 These destinations were supplied by the owner (GitHub is the authenticated account). Live destination behavior has not yet been verified.
 
 This document resolves the profile URL inputs listed as pending in PRODUCT_BRIEF.md. The photo and final bilingual introduction remain pending.
