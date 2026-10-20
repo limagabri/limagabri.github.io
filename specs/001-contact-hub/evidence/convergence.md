@@ -19,3 +19,17 @@ existing task descriptions or IDs. No product source was changed by converge.
 Remaining counts: 1 partial, 1 missing, 0 contradicts, 0 unrequested; 2 HIGH.
 The photo fixture proves handling only, not delivery of the owner's asset.
 After external resolution run implement on remaining tasks then converge again.
+
+## Follow-up after production verification
+
+2026-10-20: Implement resumed, completing T016 and T017 through PR #1 merge and successful
+Pages workflow 39485753221. Live HTTPS verification passed all eight browser scenarios and both
+asset-byte comparisons. The prerequisite script was rerun with --require-spec --require-tasks
+--include-tasks; current artifacts and in-scope code were assessed again.
+
+Same inventory plus two prior convergence tasks assessed. F1 is resolved. Only F2 remains:
+missing owner portrait, HIGH, US3/AC2 and Constitution V, evidenced by no public/images/profile.jpg.
+Summary: 1 missing, 0 partial, 0 contradicts, 0 unrequested; 1 HIGH.
+Append-only convergence added T019 in Phase 8 to carry forward the remaining work from T018.
+No code/spec/plan changes were made by converge. No extension hooks are configured.
+Outcome: tasks_appended, **not Converged**, because the actual owner asset is an external blocker.
