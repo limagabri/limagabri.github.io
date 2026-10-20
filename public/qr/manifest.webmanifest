@@ -1,0 +1,17 @@
+{
+  "id": "/qr/",
+  "name": "Gabriel de Souza Lima | QR",
+  "short_name": "Gabriel QR",
+  "description": "Gabriel de Souza Lima's contact QR card",
+  "lang": "en",
+  "start_url": "/qr/",
+  "scope": "/qr/",
+  "display": "standalone",
+  "background_color": "#0c1020",
+  "theme_color": "#0c1020",
+  "icons": [
+    { "src": "/qr/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/qr/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/qr/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

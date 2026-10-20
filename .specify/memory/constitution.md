@@ -28,9 +28,14 @@ Official Spec Kit artifacts and execution evidence MUST be retained. Unrun check
 Missing profile assets or unverified deployment MUST remain explicit limitations.
 
 ## Product Constraints
-One complete contact hub, six unified cards including Lattes, no portfolio, QR widget, copy action,
-email, phone, downloads, emojis, or em dashes. Use recognizable service icons and local assets.
-Keep https://limagabri.github.io stable for NFC and external QR codes.
+The root contact hub MUST retain its six unified cards including Lattes and all existing behavior.
+No portfolio, copy action, email, phone, downloads, emojis, or em dashes in product copy.
+The owner-authorized /qr/ companion MUST show the permanent contact URL as a large high-contrast QR,
+name, current local portrait and contact link. It MUST be installable with /qr/ standalone launch
+and MUST work offline after its first complete successful load, including photo and local icons.
+Its offline storage MUST be isolated from root navigation and MUST NOT persist language preference.
+Use recognizable service icons and local assets. Keep https://limagabri.github.io stable.
+Actual phone installation and camera scanning MUST be distinguished from automated validation.
 
 ## Development Workflow
 Follow official installed Codex skills: constitution, specify, plan, tasks, implement, converge.
@@ -43,4 +48,4 @@ This constitution governs implementation; explicit owner instructions override i
 record the reason, review affected specs and tasks, and use semantic versioning: major for incompatible
 principles, minor for added rules, patch for clarifications. Every review MUST check these gates.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-20 | **Last Amended**: 2026-10-20
+**Version**: 1.1.0 | **Ratified**: 2026-10-20 | **Last Amended**: 2026-10-20

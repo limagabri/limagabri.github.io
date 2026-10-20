@@ -1,0 +1,325 @@
+[WebServer] (node:4725) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+(node:4744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/qr.spec.ts:42:1 › first complete online visit supports offline reload and new-tab launch with real photo and icons (3.0s)
+  ✘  1 tests/qr.spec.ts:18:1 › QR pixels contain exact contact URL; photo, navigation and memory-only language work (3.1s)
+(node:4894) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4901) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/qr.spec.ts:73:1 › manifest, local icon dimensions and installation launch configuration (3.1s)
+  ✘  4 tests/qr.spec.ts:95:1 › failed offline preparation is honest and retry recovers without deleting unrelated caches (3.1s)
+(node:5045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5053) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 320px (3.0s)
+(node:5193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 375px (3.1s)
+(node:5203) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 768px (3.0s)
+  ✘  8 tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 1440px (3.0s)
+
+
+  1) tests/qr.spec.ts:18:1 › QR pixels contain exact contact URL; photo, navigation and memory-only language work 
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('heading', { level: 1 })
+    Expected: "Gabriel de Souza Lima"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('heading', { level: 1 }) with timeout 5000ms
+      - waiting for getByRole('heading', { level: 1 })
+      - Test timeout of 3000ms exceeded.
+
+
+      18 | test('QR pixels contain exact contact URL; photo, navigation and memory-only language work', async ({ page }) => {
+      19 |   await page.goto('/qr/');
+    > 20 |   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Gabriel de Souza Lima');
+         |                                                         ^
+      21 |   const photo = page.getByRole('img', { name: 'Portrait of Gabriel de Souza Lima' });
+      22 |   await expect(photo).toBeVisible();
+      23 |   expect(await photo.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBeTruthy();
+        at /workspace/contact-page/tests/qr.spec.ts:20:57
+
+    Error Context: test-results/qr-QR-pixels-contain-exact-bec62-d-memory-only-language-work/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-QR-pixels-contain-exact-bec62-d-memory-only-language-work/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-QR-pixels-contain-exact-bec62-d-memory-only-language-work/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/qr.spec.ts:42:1 › first complete online visit supports offline reload and new-tab launch with real photo and icons 
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Ready offline"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+      12 | }
+      13 | async function ready(page: Page) {
+    > 14 |   await expect(page.getByRole('status')).toHaveText('Ready offline');
+         |                                          ^
+      15 |   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      16 | }
+      17 |
+        at ready (/workspace/contact-page/tests/qr.spec.ts:14:42)
+        at /workspace/contact-page/tests/qr.spec.ts:44:9
+
+    Error Context: test-results/qr-first-complete-online-v-bca4c-h-with-real-photo-and-icons/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-first-complete-online-v-bca4c-h-with-real-photo-and-icons/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-first-complete-online-v-bca4c-h-with-real-photo-and-icons/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/qr.spec.ts:73:1 › manifest, local icon dimensions and installation launch configuration ─
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('link[rel="manifest"]')
+    Expected: "/qr/manifest.webmanifest"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('link[rel="manifest"]') with timeout 5000ms
+      - waiting for locator('link[rel="manifest"]')
+      - Test timeout of 3000ms exceeded.
+
+
+      73 | test('manifest, local icon dimensions and installation launch configuration', async ({ page, request }) => {
+      74 |   await page.goto('/qr/');
+    > 75 |   await expect(page.locator('link[rel="manifest"]')).toHaveAttribute('href', '/qr/manifest.webmanifest');
+         |                                                      ^
+      76 |   const response = await request.get('/qr/manifest.webmanifest');
+      77 |   expect(response.ok()).toBeTruthy();
+      78 |   const manifest = await response.json();
+        at /workspace/contact-page/tests/qr.spec.ts:75:54
+
+    Error Context: test-results/qr-manifest-local-icon-dim-14e16-lation-launch-configuration/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-manifest-local-icon-dim-14e16-lation-launch-configuration/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-manifest-local-icon-dim-14e16-lation-launch-configuration/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/qr.spec.ts:95:1 › failed offline preparation is honest and retry recovers without deleting unrelated caches 
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Offline saving is unavailable. Connect and retry."
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+       96 |   await context.route('**/images/profile.jpg', route => route.fulfill({ status: 503, body: 'not available' }));
+       97 |   await page.goto('/qr/');
+    >  98 |   await expect(page.getByRole('status')).toHaveText('Offline saving is unavailable. Connect and retry.');
+          |                                          ^
+       99 |   await expect(page.getByRole('img', { name: /initials GL/ })).toBeVisible();
+      100 |   await page.evaluate(async () => { await caches.open('unrelated-test-cache'); });
+      101 |   await context.unroute('**/images/profile.jpg');
+        at /workspace/contact-page/tests/qr.spec.ts:98:42
+
+    Error Context: test-results/qr-failed-offline-preparat-8943f-t-deleting-unrelated-caches/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-failed-offline-preparat-8943f-t-deleting-unrelated-caches/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-failed-offline-preparat-8943f-t-deleting-unrelated-caches/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 320px ──────────────────────────
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Ready offline"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+      12 | }
+      13 | async function ready(page: Page) {
+    > 14 |   await expect(page.getByRole('status')).toHaveText('Ready offline');
+         |                                          ^
+      15 |   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      16 | }
+      17 |
+        at ready (/workspace/contact-page/tests/qr.spec.ts:14:42)
+        at /workspace/contact-page/tests/qr.spec.ts:116:11
+
+    Error Context: test-results/qr-QR-mobile-accessibility-and-layout-at-320px/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-QR-mobile-accessibility-and-layout-at-320px/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-QR-mobile-accessibility-and-layout-at-320px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 375px ──────────────────────────
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Ready offline"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+      12 | }
+      13 | async function ready(page: Page) {
+    > 14 |   await expect(page.getByRole('status')).toHaveText('Ready offline');
+         |                                          ^
+      15 |   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      16 | }
+      17 |
+        at ready (/workspace/contact-page/tests/qr.spec.ts:14:42)
+        at /workspace/contact-page/tests/qr.spec.ts:116:11
+
+    Error Context: test-results/qr-QR-mobile-accessibility-and-layout-at-375px/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-QR-mobile-accessibility-and-layout-at-375px/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-QR-mobile-accessibility-and-layout-at-375px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 768px ──────────────────────────
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Ready offline"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+      12 | }
+      13 | async function ready(page: Page) {
+    > 14 |   await expect(page.getByRole('status')).toHaveText('Ready offline');
+         |                                          ^
+      15 |   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      16 | }
+      17 |
+        at ready (/workspace/contact-page/tests/qr.spec.ts:14:42)
+        at /workspace/contact-page/tests/qr.spec.ts:116:11
+
+    Error Context: test-results/qr-QR-mobile-accessibility-and-layout-at-768px/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-QR-mobile-accessibility-and-layout-at-768px/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-QR-mobile-accessibility-and-layout-at-768px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 1440px ─────────────────────────
+
+    Test timeout of 3000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('status')
+    Expected: "Ready offline"
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+      - Test timeout of 3000ms exceeded.
+
+
+      12 | }
+      13 | async function ready(page: Page) {
+    > 14 |   await expect(page.getByRole('status')).toHaveText('Ready offline');
+         |                                          ^
+      15 |   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      16 | }
+      17 |
+        at ready (/workspace/contact-page/tests/qr.spec.ts:14:42)
+        at /workspace/contact-page/tests/qr.spec.ts:116:11
+
+    Error Context: test-results/qr-QR-mobile-accessibility-and-layout-at-1440px/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/qr-QR-mobile-accessibility-and-layout-at-1440px/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/qr-QR-mobile-accessibility-and-layout-at-1440px/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    tests/qr.spec.ts:18:1 › QR pixels contain exact contact URL; photo, navigation and memory-only language work 
+    tests/qr.spec.ts:42:1 › first complete online visit supports offline reload and new-tab launch with real photo and icons 
+    tests/qr.spec.ts:73:1 › manifest, local icon dimensions and installation launch configuration ──
+    tests/qr.spec.ts:95:1 › failed offline preparation is honest and retry recovers without deleting unrelated caches 
+    tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 320px ───────────────────────────
+    tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 375px ───────────────────────────
+    tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 768px ───────────────────────────
+    tests/qr.spec.ts:112:3 › QR mobile accessibility and layout at 1440px ──────────────────────────
